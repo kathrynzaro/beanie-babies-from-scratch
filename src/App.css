@@ -1,38 +1,158 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Bangers&family=Chicle&family=Comfortaa:wght@300&family=Creepster&family=Great+Vibes&family=Griffy&family=IM+Fell+French+Canon&family=IM+Fell+French+Canon+SC&family=Inconsolata:wght@200&family=Irish+Grover&family=Josefin+Sans&family=Karla&family=Limelight&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@400;700&family=Neonderthaw&family=Nixie+One&family=Oswald&family=Philosopher:wght@400;700&family=Poiret+One&family=Press+Start+2P&family=Raleway:wght@100&family=Roboto+Mono:wght@100&family=Rye&family=Slabo+27px&family=Space+Mono&family=Spectral&family=Tenor+Sans&family=Ultra&family=Unica+One&family=VT323&family=Varela+Round&family=Yeseva+One&display=swap');
+
+.App, html, body {
   text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 4rem;
+  font-family: 'Neonderthaw', cursive;
+  color: #fff;
+  /* border: 3px solid white; */
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  text-shadow:
+    0 0 7px rgb(255, 83, 83),
+    0 0 10px rgb(255, 71, 71),
+    0 0 21px rgb(251, 4, 4),
+    0 0 42px rgb(196, 16, 0);
+  animation: flicker 3s infinite alternate ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h2 {
+  font-size: 2rem;
+    font-family: 'Neonderthaw', cursive;
+    color: #fff;
+    /* border: 3px solid white; */
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    text-shadow:
+      0 0 7px rgb(255, 83, 83),
+      0 0 10px rgb(255, 71, 71),
+      0 0 21px rgb(251, 4, 4),
+      0 0 42px rgb(196, 16, 0);
+}
+
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 7px rgb(255, 83, 83),
+        0 0 10px rgb(255, 71, 71),
+        0 0 21px rgb(251, 4, 4),
+        0 0 42px rgb(196, 16, 0);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.restaurant {
+  color: white;
+  /* background-color: white; */
+  width: 190px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+
+.restaurant h3 {
+  margin: 10px 0;
+}
+
+.restaurant:hover {
+  border: none;
+}
+
+.restaurant h3:hover {
+  text-shadow:
+      0 0 7px rgb(255, 83, 83),
+      0 0 10px rgb(255, 71, 71),
+      0 0 21px rgb(251, 4, 4),
+      0 0 42px rgb(196, 16, 0);
+}
+
+.restaurant p {
+  width: 150px;
+  margin: 5px 0;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 50px 10px;
+}
+
+button {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  /* border: 2px solid rgb(255, 255, 255); */
+  border: none;
+  border-radius: 5px;
+  padding: 0 8px;
+  margin: 5px;
+  background-color: black;
   color: white;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  cursor: pointer;
+  /* opacity: .6; */
+  text-shadow:
+      0 0 7px rgb(255, 83, 83),
+      0 0 10px rgb(255, 71, 71),
+      0 0 21px rgb(251, 4, 4),
+      0 0 42px rgb(196, 16, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.restaurant-detail {
+  color: white;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.restaurant-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.restaurant-detail h1 {
+  font-size: 3rem;
+  margin: 40px 10px;
+}
+
+
+.address {
+  font-size: 1.5rem;
+}
+
+.address p {
+  margin: 5px 0;
+  width: 220px;
+}
+

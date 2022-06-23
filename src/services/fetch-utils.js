@@ -1,9 +1,10 @@
 import { client, checkError } from './client';
 
-export async function getRestaurants() {
+export async function getRestaurants(from = 0, to = 30) {
   const response = await client
     .from('restaurants')
-    .select('*');
+    .select('*')
+    .range(from, to);
   
   return checkError(response);
 }

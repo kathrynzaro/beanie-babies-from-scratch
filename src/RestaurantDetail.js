@@ -16,15 +16,17 @@ export default function RestaurantDetail() {
   }, [params.id]);
 
   return (
-    <div>
-      <Link to='/'>Home</Link>
+    <div className='restaurant-data'>
+      <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>HOME</Link>
       <div className='restaurant-detail'>
-        <p>{restaurant.name}</p>
-        <p>{restaurant.street_address}</p>
-        <p>{restaurant.location}</p>
+        <h1>{restaurant.name}</h1>
+        <div className='address'>
+          <p>{restaurant.street_address}</p>
+          <p>{restaurant.location}</p>
+        </div>
         <p>{restaurant.type}</p>
-        <p>{restaurant.reviews}</p>
-        <p>{restaurant.price_range}</p>
+        <p>Rating: {restaurant.reviews}</p>
+        <p>Price: {restaurant.price_range}</p>
         <p>{restaurant.number}</p>
       </div>
     </div>

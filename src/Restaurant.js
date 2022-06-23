@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function Restaurant({ restaurant }) {
   return (
-    <Link to={`/restaurants/${restaurant.id}`}>
+    <Link style={{ textDecoration: 'none' }} to={`/restaurants/${restaurant.id}`}>
       <div className='restaurant'>
-        <h2>{restaurant.name}</h2>
+        <h3>{restaurant.name}</h3>
         <p>{restaurant.location}</p>
       </div>
     </Link>
