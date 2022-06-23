@@ -16,11 +16,9 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <RestaurantsPage />
-            {/* this home page route should list all the beanies */}
           </Route>
           <Route exact path="/beanies/:id"> 
             <RestaurantDetail />
-            {/* this route should point to a particulat beanie baby by id and render that specific BeanieDetail page */}
           </Route>
         </Switch>
       </div>
