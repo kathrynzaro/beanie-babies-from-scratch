@@ -7,3 +7,13 @@ export async function getRestaurants() {
   
   return checkError(response);
 }
+
+export async function getRestaurantById(id) {
+  const response = await client
+    .from('restaurants')
+    .select('*')
+    .match({ id })
+    .single();
+  
+  return checkError(response);
+}

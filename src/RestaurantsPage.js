@@ -8,9 +8,9 @@ function App() {
 
   useEffect(() => {
     async function fetch() {
-      const restaurants = await getRestaurants();
+      const data = await getRestaurants();
 
-      setRestaurants(restaurants);
+      setRestaurants(data);
     }
   
     fetch();
@@ -20,8 +20,8 @@ function App() {
     <div>
       <h2>Current Page</h2>
       <div className='buttons'>
-        <button></button>
-        <button></button>
+        <button>Previous Page</button>
+        <button>Next Page</button>
       </div>
       <RestaurantsList restaurants={restaurants} />
     </div>
@@ -29,3 +29,5 @@ function App() {
 }
 
 export default App;
+
+{/* <Item>Page : tracks items and page state correctly, refetching whenever the page state changes, passes props correctly to <Item>List	 */}

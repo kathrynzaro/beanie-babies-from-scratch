@@ -17,7 +17,7 @@ export default function App() {
           <Route exact path="/">
             <RestaurantsPage />
           </Route>
-          <Route exact path="/beanies/:id"> 
+          <Route exact path="/restaurants/:id"> 
             <RestaurantDetail />
           </Route>
         </Switch>
@@ -25,3 +25,5 @@ export default function App() {
     </Router>
   );
 }
+
+// App() : has routes to the ItemPage and ItemDetail components, with appropriate exact path props
