@@ -80,10 +80,6 @@ h2 {
 }
 
 .restaurant:hover {
-  border: none;
-}
-
-.restaurant h3:hover {
   text-shadow:
       0 0 7px rgb(255, 83, 83),
       0 0 10px rgb(255, 71, 71),
